@@ -37,7 +37,7 @@ class TTMTVC: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
@@ -52,7 +52,7 @@ class TTMTVC: UITableViewController {
         if cell is TTMMessageCell
         {
             let messageCell: TTMMessageCell! = cell as! TTMMessageCell
-            messageCell.messageLabel.text = "Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test"
+            messageCell.messageLabel.text = "Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test"
             
         }
 

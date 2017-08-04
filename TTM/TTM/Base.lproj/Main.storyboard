@@ -30,34 +30,45 @@
         <scene sceneID="v4v-iQ-hRe">
             <objects>
                 <tableViewController id="0U7-Qi-pYd" customClass="TTMTVC" customModule="TTM" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="psN-Ki-3QA">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="psN-Ki-3QA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="44" id="NGU-UE-PJD" customClass="TTMMessageCell" customModule="TTM" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="65" id="NGU-UE-PJD" customClass="TTMMessageCell" customModule="TTM" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="65"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NGU-UE-PJD" id="mCT-fs-QgC">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test-1" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEn-yz-VGs">
-                                            <rect key="frame" x="8" y="0.0" width="359" height="36"/>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AyM-jQ-yqy">
+                                            <rect key="frame" x="304.5" y="5" width="60.5" height="50"/>
+                                            <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Test-1" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEn-yz-VGs">
+                                            <rect key="frame" x="314.5" y="15" width="40.5" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="305" id="q3e-bI-oSa"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="IEn-yz-VGs" secondAttribute="trailing" constant="8" id="Pmg-dA-d1Q"/>
-                                        <constraint firstItem="IEn-yz-VGs" firstAttribute="leading" secondItem="mCT-fs-QgC" secondAttribute="leading" constant="8" id="j9o-dP-t4F"/>
-                                        <constraint firstItem="IEn-yz-VGs" firstAttribute="top" secondItem="mCT-fs-QgC" secondAttribute="top" id="u8z-VW-UHt"/>
-                                        <constraint firstAttribute="bottom" secondItem="IEn-yz-VGs" secondAttribute="bottom" constant="7.5" id="x4V-hB-Oej"/>
+                                        <constraint firstItem="IEn-yz-VGs" firstAttribute="bottom" secondItem="AyM-jQ-yqy" secondAttribute="bottom" constant="-10" id="J2u-pf-Sf8"/>
+                                        <constraint firstItem="IEn-yz-VGs" firstAttribute="trailing" secondItem="AyM-jQ-yqy" secondAttribute="trailing" constant="-10" id="J79-Mn-ydQ"/>
+                                        <constraint firstItem="IEn-yz-VGs" firstAttribute="leading" secondItem="AyM-jQ-yqy" secondAttribute="leading" constant="10" id="N5O-Oi-brv"/>
+                                        <constraint firstAttribute="trailing" secondItem="IEn-yz-VGs" secondAttribute="trailing" constant="20" id="Pmg-dA-d1Q"/>
+                                        <constraint firstItem="IEn-yz-VGs" firstAttribute="top" secondItem="AyM-jQ-yqy" secondAttribute="top" constant="10" id="bbR-9f-ybp"/>
+                                        <constraint firstItem="IEn-yz-VGs" firstAttribute="top" secondItem="mCT-fs-QgC" secondAttribute="top" constant="15" id="u8z-VW-UHt"/>
+                                        <constraint firstAttribute="bottom" secondItem="IEn-yz-VGs" secondAttribute="bottom" constant="20" id="x4V-hB-Oej"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="messageContainerView" destination="AyM-jQ-yqy" id="il0-rG-46h"/>
                                     <outlet property="messageLabel" destination="IEn-yz-VGs" id="JPN-CN-RNd"/>
                                 </connections>
                             </tableViewCell>
