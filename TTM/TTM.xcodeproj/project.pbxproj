@@ -14,6 +14,8 @@
 		1E8B66D41F3464DF00C2F63D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E8B66D21F3464DF00C2F63D /* LaunchScreen.storyboard */; };
 		1E8B66DF1F3464DF00C2F63D /* TTMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B66DE1F3464DF00C2F63D /* TTMTests.swift */; };
 		1E8B66EA1F3464DF00C2F63D /* TTMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B66E91F3464DF00C2F63D /* TTMUITests.swift */; };
+		1E8B66FE1F348E4300C2F63D /* TTMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B66FD1F348E4300C2F63D /* TTMViewController.swift */; };
+		1E8B67001F348ED200C2F63D /* TTMSenderMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B66FF1F348ED200C2F63D /* TTMSenderMessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		1E8B66E51F3464DF00C2F63D /* TTMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8B66E91F3464DF00C2F63D /* TTMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTMUITests.swift; sourceTree = "<group>"; };
 		1E8B66EB1F3464DF00C2F63D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E8B66FD1F348E4300C2F63D /* TTMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMViewController.swift; sourceTree = "<group>"; };
+		1E8B66FF1F348ED200C2F63D /* TTMSenderMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMSenderMessageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				1E8B66D21F3464DF00C2F63D /* LaunchScreen.storyboard */,
 				1E8B66D51F3464DF00C2F63D /* Info.plist */,
 				1E8B66CD1F3464DF00C2F63D /* TTM.xcdatamodeld */,
+				1E8B66FD1F348E4300C2F63D /* TTMViewController.swift */,
+				1E8B66FF1F348ED200C2F63D /* TTMSenderMessageCell.swift */,
 			);
 			path = TTM;
 			sourceTree = "<group>";
@@ -262,7 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E8B67001F348ED200C2F63D /* TTMSenderMessageCell.swift in Sources */,
 				1E8B66CF1F3464DF00C2F63D /* TTM.xcdatamodeld in Sources */,
+				1E8B66FE1F348E4300C2F63D /* TTMViewController.swift in Sources */,
 				1E8B66C71F3464DF00C2F63D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
