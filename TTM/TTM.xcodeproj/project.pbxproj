@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1E8B66C71F3464DF00C2F63D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B66C61F3464DF00C2F63D /* AppDelegate.swift */; };
-		1E8B66C91F3464DF00C2F63D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B66C81F3464DF00C2F63D /* ViewController.swift */; };
 		1E8B66CC1F3464DF00C2F63D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E8B66CA1F3464DF00C2F63D /* Main.storyboard */; };
 		1E8B66CF1F3464DF00C2F63D /* TTM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B66CD1F3464DF00C2F63D /* TTM.xcdatamodeld */; };
 		1E8B66D11F3464DF00C2F63D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E8B66D01F3464DF00C2F63D /* Assets.xcassets */; };
 		1E8B66D41F3464DF00C2F63D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E8B66D21F3464DF00C2F63D /* LaunchScreen.storyboard */; };
 		1E8B66DF1F3464DF00C2F63D /* TTMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B66DE1F3464DF00C2F63D /* TTMTests.swift */; };
 		1E8B66EA1F3464DF00C2F63D /* TTMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B66E91F3464DF00C2F63D /* TTMUITests.swift */; };
+		1E8B66F81F3466EA00C2F63D /* TTMTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B66F71F3466EA00C2F63D /* TTMTVC.swift */; };
+		1E8B66FA1F34674C00C2F63D /* TTMMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B66F91F34674C00C2F63D /* TTMMessageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +38,6 @@
 /* Begin PBXFileReference section */
 		1E8B66C31F3464DF00C2F63D /* TTM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8B66C61F3464DF00C2F63D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1E8B66C81F3464DF00C2F63D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1E8B66CB1F3464DF00C2F63D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1E8B66CE1F3464DF00C2F63D /* TTM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TTM.xcdatamodel; sourceTree = "<group>"; };
 		1E8B66D01F3464DF00C2F63D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		1E8B66E51F3464DF00C2F63D /* TTMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8B66E91F3464DF00C2F63D /* TTMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTMUITests.swift; sourceTree = "<group>"; };
 		1E8B66EB1F3464DF00C2F63D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E8B66F71F3466EA00C2F63D /* TTMTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMTVC.swift; sourceTree = "<group>"; };
+		1E8B66F91F34674C00C2F63D /* TTMMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMMessageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +102,13 @@
 			isa = PBXGroup;
 			children = (
 				1E8B66C61F3464DF00C2F63D /* AppDelegate.swift */,
-				1E8B66C81F3464DF00C2F63D /* ViewController.swift */,
 				1E8B66CA1F3464DF00C2F63D /* Main.storyboard */,
 				1E8B66D01F3464DF00C2F63D /* Assets.xcassets */,
 				1E8B66D21F3464DF00C2F63D /* LaunchScreen.storyboard */,
 				1E8B66D51F3464DF00C2F63D /* Info.plist */,
 				1E8B66CD1F3464DF00C2F63D /* TTM.xcdatamodeld */,
+				1E8B66F71F3466EA00C2F63D /* TTMTVC.swift */,
+				1E8B66F91F34674C00C2F63D /* TTMMessageCell.swift */,
 			);
 			path = TTM;
 			sourceTree = "<group>";
@@ -265,8 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E8B66F81F3466EA00C2F63D /* TTMTVC.swift in Sources */,
+				1E8B66FA1F34674C00C2F63D /* TTMMessageCell.swift in Sources */,
 				1E8B66CF1F3464DF00C2F63D /* TTM.xcdatamodeld in Sources */,
-				1E8B66C91F3464DF00C2F63D /* ViewController.swift in Sources */,
 				1E8B66C71F3464DF00C2F63D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
