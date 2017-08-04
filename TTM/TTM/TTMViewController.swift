@@ -17,6 +17,8 @@ class TTMViewController: UIViewController, UITableViewDataSource, UITableViewDel
     @IBOutlet weak var icvBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var ttmTextView: UITextView!
     
+    var messages: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -42,7 +44,6 @@ class TTMViewController: UIViewController, UITableViewDataSource, UITableViewDel
         self.view.layoutIfNeeded()
         UIView.animate(withDuration: 0.3) { 
             self.icvBottomConstraint.constant = keyboardSize.height
-            self.tableView.setContentOffset(CGPoint(x: 0, y: self.tableView.contentSize.height - 280), animated: true)
             self.view.layoutIfNeeded()
         }
         
@@ -69,7 +70,7 @@ class TTMViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 3
+        return self.messages.count
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat
@@ -84,12 +85,27 @@ class TTMViewController: UIViewController, UITableViewDataSource, UITableViewDel
         if cell is TTMSenderMessageCell
         {
             let messageCell: TTMSenderMessageCell! = cell as! TTMSenderMessageCell
-            messageCell.messageLabel.text = "Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test Test ganesh 123 first AI Test"
+            messageCell.messageLabel.text = self.messages[indexPath.row]
             messageCell.messageLabel.sizeToFit()
             
         }
         
         return cell
+    }
+    
+    
+    @IBAction func sendButtonTapped(button: UIButton)
+    {
+    
+        if let message = ttmTextView.text
+        {
+            self.messages.append(message)
+        }
+        
+        self.tableView.reloadData()
+        
+        ttmTextView.text = "";
+        
     }
 
 

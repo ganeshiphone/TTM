@@ -106,6 +106,9 @@
                                         <state key="normal" title="SEND">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendButtonTappedWithButton:" destination="3nQ-Jf-ai7" eventType="touchUpInside" id="013-zD-ad7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.84438872340000004" green="1" blue="0.92632722850000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
