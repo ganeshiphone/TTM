@@ -11,17 +11,17 @@ import Foundation
 
 class TTMViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextViewDelegate
 {
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var inputContainerView: UIView!
     @IBOutlet weak var icvBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var ttmTextView: UITextView!
     
-    var messages: [String] = []
+    var messages: [AnyObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         self.tableView.contentInset = UIEdgeInsetsMake(-60, 0, 0, 0)
@@ -42,7 +42,7 @@ class TTMViewController: UIViewController, UITableViewDataSource, UITableViewDel
         
         let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as! CGRect).size
         self.view.layoutIfNeeded()
-        UIView.animate(withDuration: 0.3) { 
+        UIView.animate(withDuration: 0.3) {
             self.icvBottomConstraint.constant = keyboardSize.height
             self.view.layoutIfNeeded()
         }
@@ -55,9 +55,9 @@ class TTMViewController: UIViewController, UITableViewDataSource, UITableViewDel
             self.icvBottomConstraint.constant = 0
             self.view.layoutIfNeeded()
         }
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -80,15 +80,41 @@ class TTMViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath)
         
-        if cell is TTMSenderMessageCell
+        let value = self.messages[indexPath.row]
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath)
+        
+        if value is TTMMessage
         {
-            let messageCell: TTMSenderMessageCell! = cell as! TTMSenderMessageCell
-            messageCell.messageLabel.text = self.messages[indexPath.row]
-            messageCell.messageLabel.sizeToFit()
-            
+            if cell is TTMSenderMessageCell
+            {
+                let messageCell: TTMSenderMessageCell! = cell as! TTMSenderMessageCell
+                
+                
+                messageCell.messageLabel.text = value.message
+                
+                messageCell.messageLabel.sizeToFit()
+                
+            }
         }
+        else if value is TTMResponse
+        {
+            if cell is TTMSenderMessageCell
+            {
+                cell = tableView.dequeueReusableCell(withIdentifier: "ResponseCell", for: indexPath)
+                
+                let messageCell: TTMSenderMessageCell! = cell as! TTMSenderMessageCell
+                
+                
+                messageCell.messageLabel.text = value.message
+                
+                messageCell.messageLabel.sizeToFit()
+                
+            }
+        }
+        
+        
         
         return cell
     }
@@ -96,10 +122,16 @@ class TTMViewController: UIViewController, UITableViewDataSource, UITableViewDel
     
     @IBAction func sendButtonTapped(button: UIButton)
     {
-    
+        
         if let message = ttmTextView.text
         {
-            self.messages.append(message)
+            let newMessage = TTMMessage()
+            newMessage.message = message;
+            self.messages.append(newMessage)
+            
+            let newResponse = TTMResponse()
+            newResponse.message = message;
+            self.messages.append(newResponse)
         }
         
         self.tableView.reloadData()
@@ -107,16 +139,16 @@ class TTMViewController: UIViewController, UITableViewDataSource, UITableViewDel
         ttmTextView.text = "";
         
     }
-
-
+    
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

@@ -16,6 +16,9 @@
 		1E8B66EA1F3464DF00C2F63D /* TTMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B66E91F3464DF00C2F63D /* TTMUITests.swift */; };
 		1E8B66FE1F348E4300C2F63D /* TTMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B66FD1F348E4300C2F63D /* TTMViewController.swift */; };
 		1E8B67001F348ED200C2F63D /* TTMSenderMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8B66FF1F348ED200C2F63D /* TTMSenderMessageCell.swift */; };
+		1EA020331F3645AE0067E354 /* TTMMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA020321F3645AE0067E354 /* TTMMessage.swift */; };
+		1EA020351F3645C90067E354 /* TTMResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA020341F3645C90067E354 /* TTMResponse.swift */; };
+		1EA020381F3645E60067E354 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EA020371F3645E60067E354 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		1E8B66EB1F3464DF00C2F63D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1E8B66FD1F348E4300C2F63D /* TTMViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMViewController.swift; sourceTree = "<group>"; };
 		1E8B66FF1F348ED200C2F63D /* TTMSenderMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMSenderMessageCell.swift; sourceTree = "<group>"; };
+		1EA020321F3645AE0067E354 /* TTMMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMMessage.swift; sourceTree = "<group>"; };
+		1EA020341F3645C90067E354 /* TTMResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTMResponse.swift; sourceTree = "<group>"; };
+		1EA020371F3645E60067E354 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EA020381F3645E60067E354 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +92,7 @@
 				1E8B66DD1F3464DF00C2F63D /* TTMTests */,
 				1E8B66E81F3464DF00C2F63D /* TTMUITests */,
 				1E8B66C41F3464DF00C2F63D /* Products */,
+				1EA020361F3645E60067E354 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +117,8 @@
 				1E8B66CD1F3464DF00C2F63D /* TTM.xcdatamodeld */,
 				1E8B66FD1F348E4300C2F63D /* TTMViewController.swift */,
 				1E8B66FF1F348ED200C2F63D /* TTMSenderMessageCell.swift */,
+				1EA020321F3645AE0067E354 /* TTMMessage.swift */,
+				1EA020341F3645C90067E354 /* TTMResponse.swift */,
 			);
 			path = TTM;
 			sourceTree = "<group>";
@@ -129,6 +139,14 @@
 				1E8B66EB1F3464DF00C2F63D /* Info.plist */,
 			);
 			path = TTMUITests;
+			sourceTree = "<group>";
+		};
+		1EA020361F3645E60067E354 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1EA020371F3645E60067E354 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +286,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EA020331F3645AE0067E354 /* TTMMessage.swift in Sources */,
 				1E8B67001F348ED200C2F63D /* TTMSenderMessageCell.swift in Sources */,
+				1EA020351F3645C90067E354 /* TTMResponse.swift in Sources */,
 				1E8B66CF1F3464DF00C2F63D /* TTM.xcdatamodeld in Sources */,
 				1E8B66FE1F348E4300C2F63D /* TTMViewController.swift in Sources */,
 				1E8B66C71F3464DF00C2F63D /* AppDelegate.swift in Sources */,
